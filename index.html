@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Kristoffer Hansen – Portefølje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="#hjem" class="brand">Kristoffer Hansen</a>
+  <div class="navlinks">
+    <a href="#hjem" class="nav-link" data-page="hjem">Hjem</a>
+    <a href="#om-meg" class="nav-link" data-page="om-meg">Om meg</a>
+    <a href="#cv" class="nav-link" data-page="cv">CV</a>
+    <a href="#prosjekter" class="nav-link" data-page="prosjekter">Prosjekter</a>
+  </div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt fargetema">
+    <span id="themeIcon">🌙</span>
+  </button>
+</nav>
+
+<main>
+
+  <section class="page" id="hjem" data-page="hjem">
+    <div class="hero">
+      <svg class="hero-traces" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="trace" style="animation-delay:0s" d="M20,70 H260 V180 H460 V70 H700"></path>
+        <path class="trace" style="animation-delay:0.12s" d="M60,390 H240 V300 H520 V390 H770"></path>
+        <path class="trace" style="animation-delay:0.24s" d="M720,30 V150 H540 V240"></path>
+        <path class="trace" style="animation-delay:0.36s" d="M120,230 H320 V300"></path>
+        <circle class="node" style="animation-delay:1.6s" cx="260" cy="70" r="5"></circle>
+        <circle class="node" style="animation-delay:1.7s" cx="460" cy="180" r="5"></circle>
+        <circle class="node" style="animation-delay:1.8s" cx="700" cy="70" r="5"></circle>
+        <circle class="node" style="animation-delay:1.9s" cx="240" cy="390" r="5"></circle>
+        <circle class="node" style="animation-delay:2.0s" cx="520" cy="300" r="5"></circle>
+        <circle class="node" style="animation-delay:2.1s" cx="540" cy="240" r="5"></circle>
+        <circle class="node" style="animation-delay:2.2s" cx="320" cy="300" r="5"></circle>
+      </svg>
+      <div class="container hero-inner">
+        <h1>Kristoffer Hansen</h1>
+        <div class="tagline">Fra sensor til server.</div>
+        <p class="lede">Jeg liker å forstå hvordan ting henger sammen – fra en sensor som måler noe i den fysiske verden, til systemet som samler inn, lagrer og viser dataene. Nå søker jeg opptak til programmering og systemarkitektur ved Universitetet i Oslo.</p>
+        <p class="status-line">Fra Alta, Finnmark. Flytter til Oslo for studier.</p>
+        <div class="cta-row">
+          <a href="#prosjekter" class="btn btn-primary">Se prosjektene mine</a>
+          <a href="#cv" class="btn btn-ghost">Se CV-en</a>
+        </div>
+        <div class="pills">
+          <span class="pill">Elektronikk</span>
+          <span class="pill">Systemarkitektur</span>
+          <span class="pill">Hjemmeautomasjon</span>
+          <span class="pill">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="om-meg" data-page="om-meg">
+    <div class="container section">
+      <h2>Om meg</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Jeg er fra Alta i Finnmark, og har akkurat flyttet til Oslo for å studere programmering og systemarkitektur ved UIO.
+             I 2018 begynte jeg som elektriker lærling og fortsatte innenfor faget til 2026 da jeg fant ut at jeg ønsket meg litt tilbake på skolebenken for å prøve noe nytt.</p>
+          <p>Programmering er noe som har fascinert meg så lenge jeg kan huske.
+             Så når jeg i 2023 gikk å irriterte meg over at baderomsvifta enten bråkte for mye eller ikke gikk og måtte justeres manuelt hele tiden,
+              ble jeg inspirert til å lage løsningen selv.
+             Løsningen min var en esp32 på badet med en bme680 sensor. Den hentet data og sendte det over MQTT.
+             En ny esp32 som var på loftet hentet dataen og brukte den informasjonen til å justere hastigheten på vifta.</p>
+          <p>Som elektriker har jeg alltid vært interessert i smarthus. Der jeg håper å påvirke verden mot en verden med mer åpen kildekode og enkel integrering.
+             Hjemme kjører jeg HA i en docker container på en raspberry pi, og har også laget en forsøkslab (som foreldrene mine bor i) full av zigbee enheter.
+             På labben står en linux server som i hovedsak kjører zigbee2MQTT, Evolo og HA, men den gir meg også mulighet til å å utforske å prøve nye ting.</p>
+        </div>
+        <div class="interest-box">
+          <h3>Interesser</h3>
+          <div class="pills">
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">ESP32 / Arduino</span>
+            <span class="pill">MQTT</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Home Assistant</span>
+            <span class="pill">IaC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="cv" data-page="cv">
+    <div class="container section">
+      <h2>CV</h2>
+
+      <div class="cv-block">
+        <h3>Utdanning</h3>
+        <ul class="timeline">
+          <li class="tl-item">
+            <h4 class="tl-title">Programmering og systemarkitektur</h4>
+            <div class="tl-org">Universitetet i Oslo</div>
+            <div class="tl-desc"></div>
+          </li>
+          <li class="tl-item">
+            <h4 class="tl-title">Påbygg til generell studiekompetanse</h4>
+            <div class="tl-org">Sonans AS</div>
+            <div class="tl-desc">Tok påbygg over et år. I starten var det vedsiden av jobb men fra mars til mai var det 100% fokus på selvstudie.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cv-block">
+        <h3>Ferdigheter</h3>
+        <div class="skill-group">
+          <h4>Programmering</h4>
+          <div class="pills"><span class="pill">Python</span><span class="pill">JavaScript</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Elektronikk og embedded</h4>
+          <div class="pills"><span class="pill">Arduino / C++</span><span class="pill">ESP32</span><span class="pill">MQTT</span><span class="pill">SPI-sensorer</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Infrastruktur og drift</h4>
+          <div class="pills"><span class="pill">Docker</span><span class="pill">Docker Compose</span><span class="pill">Home Assistant</span><span class="pill">Zigbee2MQTT</span></div>
+        </div>
+        <div class="skill-group">
+          <h4>Under læring</h4>
+          <div class="pills"><span class="pill">Terraform</span><span class="pill">Ansible</span><span class="pill">Pulumi</span></div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <h3>Kontakt</h3>
+        <div class="contact-placeholder">
+          post@kristofferhansen.no<br>
+          <a href="https://github.com/krizkick">Github</a><br>
+          <a href="https://www.linkedin.com/in/kristoffer-hans1/">Linkedin</a>
+        </div>
+      </div>
+
+      <button class="btn btn-ghost" id="printBtn" type="button">Skriv ut / lagre som PDF</button>
+    </div>
+  </section>
+
+  <section class="page" id="prosjekter" data-page="prosjekter">
+    <div class="container section">
+      <h2>Prosjekter</h2>
+      <div class="project-grid">
+        <div class="panel">
+          <span class="status">Fullført</span>
+          <h3>Sensornode med ESP32</h3>
+          <p>En Adafruit ESP32 Feather V2 leser av en BME680-sensor over SPI og sender temperatur- og miljødata videre med MQTT.</p>
+          <div class="pills"><span class="pill">ESP32</span><span class="pill">MQTT</span><span class="pill">SPI</span><span class="pill">BME680</span></div>
+        </div>
+        <div class="panel">
+          <span class="status">Under utvikling</span>
+          <h3>Smart speil</h3>
+          <p>Et speil som skal styres med håndbevegelser, gjenkjent av et kamera via MediaPipe. Programvaren skriver jeg fra bunnen av selv.</p>
+          <div class="pills"><span class="pill">MediaPipe</span><span class="pill">Kamera</span><span class="pill">Python</span></div>
+        </div>
+        <div class="panel">
+          <span class="status">I drift</span>
+          <h3>Hjemmeautomasjon</h3>
+          <p>Home Assistant kjører i Docker på en Raspberry Pi og styrer lys og sensorer via Zigbee2MQTT. Egendefinert logikk på en Evolo-gateway justerer blant annet fargetemperaturen på lyset gjennom dagen.</p>
+          <div class="pills"><span class="pill">Home Assistant</span><span class="pill">Docker</span><span class="pill">Zigbee2MQTT</span></div>
+        </div>
+        <div class="panel ghost">
+          <h3>Flere prosjekter på vei</h3>
+          <p>Denne siden fylles på etter hvert som nye prosjekter blir klare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container"></div>
+</footer>
+</body>
+</html>
