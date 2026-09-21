@@ -54,4 +54,42 @@ if(printBtn){
     setTimeout(function(){ window.print(); }, 60);
   });
 }
+
+var phrases = [
+  "Fra sensor til server.",
+  "Fra nettverkskabel til nettverksarkitektur.",
+  "Fra sikringskapet til skyen.",
+  "Fra fysisk til applikasjon.",
+  "Fra stikkontakt til nettverkskontakt."
+];
+
+var typewriterEl = document.getElementById('typewriter');
+var phraseIndex = 0;
+var charIndex = 0;
+var deleting = false;
+
+function typeLoop(){
+  var current = phrases[phraseIndex];
+
+  if(!deleting){
+    typewriterEl.textContent = current.slice(0, charIndex + 1);
+    charIndex++;
+    if(charIndex === current.length){
+      deleting = true;
+      setTimeout(typeLoop, 1500);
+      return;
+    }
+  } else {
+    typewriterEl.textContent = current.slice(0, charIndex - 1);
+    charIndex--;
+    if(charIndex === 0){
+      deleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
+  }
+
+  setTimeout(typeLoop, deleting ? 40 : 40);
+}
+
+typeLoop();
 })();
