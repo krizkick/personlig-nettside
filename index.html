@@ -7,7 +7,7 @@
 <title>Kristoffer Hansen – Portefølje</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
@@ -16,10 +16,10 @@
 <nav class="topnav">
   <a href="#hjem" class="brand">Kristoffer Hansen</a>
   <div class="navlinks">
-    <a href="#hjem" class="nav-link" data-page="hjem">Hjem</a>
-    <a href="#om-meg" class="nav-link" data-page="om-meg">Om meg</a>
-    <a href="#cv" class="nav-link" data-page="cv">CV</a>
-    <a href="#prosjekter" class="nav-link" data-page="prosjekter">Prosjekter</a>
+    <a href="#hjem" class="nav-link" data-page="hjem" data-text="Hjem"><span>Hjem</span></a>
+    <a href="#om-meg" class="nav-link" data-page="om-meg" data-text="Om meg"><span>Om meg</span></a>
+    <a href="#cv" class="nav-link" data-page="cv" data-text="CV"><span>CV</span></a>
+    <a href="#prosjekter" class="nav-link" data-page="prosjekter" data-text="Prosjekter"><span>Prosjekter</span></a>
   </div>
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt fargetema">
     <span id="themeIcon">🌙</span>
@@ -49,7 +49,7 @@
         <p class="lede">Jeg liker problemløsning. Fra starten min som elektriker, løste jeg små problemer for mennesker i nærmiljøet mitt.
            En stikkontakt som manglet eller et lys som ikke funket.<br>Nå søker jeg meg videre mot en verden med uendelig mengde problemer og uante løsninger i sikte.
         </p>
-        <p class="status-line">Informatikk studen ved Universitetet i Oslo</p>
+        <p class="status-line">Informatikk student ved Universitetet i Oslo</p>
         <div class="cta-row">
           <a href="#prosjekter" class="btn btn-primary">Se prosjektene mine</a>
           <a href="#cv" class="btn btn-ghost">Se CV-en</a>
@@ -104,14 +104,45 @@
         <h3>Utdanning</h3>
         <ul class="timeline">
           <li class="tl-item">
-            <h4 class="tl-title">Programmering og systemarkitektur</h4>
+            <h4 class="tl-title">
+              Programmering og systemarkitektur
+              <span class="tl-time">August 2026</span>
+            </h4>
             <div class="tl-org">Universitetet i Oslo</div>
             <div class="tl-desc"></div>
           </li>
           <li class="tl-item">
-            <h4 class="tl-title">Påbygg til generell studiekompetanse</h4>
+            <h4 class="tl-title">
+              Påbygg til generell studiekompetanse
+              <span class="tl-time">August 2025 - Mai 2026</span>
+            </h4>
             <div class="tl-org">Sonans AS</div>
             <div class="tl-desc">Tok påbygg over et år. I starten var det vedsiden av jobb men fra mars til mai var det 100% fokus på selvstudie.</div>
+          </li>
+          <li class="tl-item">
+            <h4 class="tl-title">
+              Videregående elektro
+              <span class="tl-time">August 2016 - Juni 2018</span>
+            </h4>
+            <div class="tl-org">Alta Videregående skole/Kirkenes videregående skole</div>
+            <div class="tl-desc">
+            </div>
+          </li>
+        </ul>
+        <h3>Arbeidserfaring</h3>
+        <ul class="timeline">
+          <li class="tl-item">
+            <h4 class="tl-title">
+              Service tekniker sikkerhet
+              <span class="tl-time">Januar 2023 - Februar 2026</span>
+            </h4>
+            <div class="tl-org">X5 elektro</div>
+            <div class="tl-desc">Satt i drift og utførte årlig kontroll av brannalarmanlegg.<br>
+              Installerte og feilsøkte på ITV anlegg.<br>
+               Installerte og feilsøkte på Innbruddsalarmanlegg.
+            </div>
+          </li>
+        </ul>
           </li>
         </ul>
       </div>
@@ -130,22 +161,25 @@
           <h4>Infrastruktur og drift</h4>
           <div class="pills"><span class="pill">Docker</span><span class="pill">Docker Compose</span><span class="pill">Home Assistant</span><span class="pill">Zigbee2MQTT</span></div>
         </div>
-        <div class="skill-group">
-          <h4>Under læring</h4>
-          <div class="pills"><span class="pill">Terraform</span><span class="pill">Ansible</span><span class="pill">Pulumi</span></div>
-        </div>
       </div>
 
       <div class="cv-block">
         <h3>Kontakt</h3>
         <div class="contact-placeholder">
-          post@kristofferhansen.no<br>
-          <a href="https://github.com/krizkick">Github</a><br>
-          <a href="https://www.linkedin.com/in/kristoffer-hans1/">Linkedin</a>
+          <a href="mailto:post@kristofferhansen.no">
+            <img src="logo/email.png" alt="email">
+          </a>
+          <a href="https://github.com/krizkick" target="_blank">
+            <img src="logo/GitHub_Lockup_Black.png" alt="GitHub">
+          </a><br>
+          <a href="https://www.linkedin.com/in/kristoffer-hans1/" target="_blank">
+            <img src="logo/LI-Logo.png" alt="Linkedin">
+          </a>
+          <a href="files/CV.pdf" download="CV-Kristoffer.pdf" class="btn btn-ghost" type="button">Last ned CV</a>
         </div>
       </div>
 
-      <button class="btn btn-ghost" id="printBtn" type="button">Skriv ut / lagre som PDF</button>
+      
     </div>
   </section>
 
