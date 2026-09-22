@@ -1,28 +1,25 @@
 (function(){
-var pages = ['hjem','om-meg','cv','prosjekter'];
 var sections = document.querySelectorAll('.page');
 var navLinks = document.querySelectorAll('.nav-link');
 
-function showPage(name){
-  sections.forEach(function(s){
-    s.classList.toggle('active', s.getAttribute('data-page') === name);
-  });
+function setActiveLink(name){
   navLinks.forEach(function(l){
     var isActive = l.getAttribute('data-page') === name;
     l.classList.toggle('active', isActive);
     if(isActive){ l.setAttribute('aria-current','page'); } else { l.removeAttribute('aria-current'); }
   });
-  window.scrollTo(0,0);
 }
 
-function syncFromHash(){
-  var hash = (location.hash || '#hjem').slice(1);
-  var page = pages.indexOf(hash) !== -1 ? hash : 'hjem';
-  showPage(page);
-}
+var sectionObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      setActiveLink(entry.target.getAttribute('data-page'));
+    }
+  });
+}, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
 
-window.addEventListener('hashchange', syncFromHash);
-syncFromHash();
+sections.forEach(function(s){ sectionObserver.observe(s); });
+setActiveLink('hjem');
 
 var themeToggle = document.getElementById('themeToggle');
 var themeIcon = document.getElementById('themeIcon');

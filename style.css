@@ -39,6 +39,8 @@
 *{box-sizing:border-box;}
 html{
   scrollbar-gutter:stable;
+  scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;
 }
 body{
   margin:0;
@@ -127,8 +129,11 @@ a{color:inherit;}
 }
 
 main{padding-top:4.2rem;}
-.page{display:none;}
-.page.active{display:block;}
+.page{
+  min-height:100vh;
+  scroll-snap-align:start;
+  scroll-margin-top:4.2rem;
+}
 
 .hero{position:relative; overflow:hidden; padding:4.5rem 0 5rem; border-bottom:1px solid var(--line);}
 @media (max-width:600px){.hero{padding:3rem 0 3.5rem;}}

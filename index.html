@@ -20,9 +20,9 @@
   <button class="nav-toggle" id="navToggle" type="button" aria-label="Åpne meny" aria-expanded="false" aria-controls="navLinks">☰</button>
   <div class="navlinks" id="navLinks">
     <a href="#hjem" class="nav-link" data-page="hjem" data-text="Hjem"><span>Hjem</span></a>
+    <a href="#prosjekter" class="nav-link" data-page="prosjekter" data-text="Prosjekter"><span>Prosjekter</span></a>
     <a href="#om-meg" class="nav-link" data-page="om-meg" data-text="Om meg"><span>Om meg</span></a>
     <a href="#cv" class="nav-link" data-page="cv" data-text="CV"><span>CV</span></a>
-    <a href="#prosjekter" class="nav-link" data-page="prosjekter" data-text="Prosjekter"><span>Prosjekter</span></a>
   </div>
   <button class="theme-toggle" id="themeToggle" type="button" aria-label="Bytt fargetema">
     <span id="themeIcon">🌙</span>
@@ -73,6 +73,36 @@
           <span class="pill">Systemarkitektur</span>
           <span class="pill">Hjemmeautomasjon</span>
           <span class="pill">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="prosjekter" data-page="prosjekter">
+    <div class="container section">
+      <h2>Prosjekter</h2>
+      <div class="project-grid">
+        <div class="panel">
+          <span class="status">Fullført</span>
+          <h3>Sensornode med ESP32</h3>
+          <p>En Adafruit ESP32 Feather V2 leser av en BME680-sensor over SPI og sender temperatur- og miljødata videre med MQTT.</p>
+          <div class="pills"><span class="pill">ESP32</span><span class="pill">MQTT</span><span class="pill">SPI</span><span class="pill">BME680</span></div>
+        </div>
+        <div class="panel">
+          <span class="status">Under utvikling</span>
+          <h3>Smart speil</h3>
+          <p>Et speil som skal styres med håndbevegelser, gjenkjent av et kamera via MediaPipe. Programvaren skriver jeg fra bunnen av selv.</p>
+          <div class="pills"><span class="pill">MediaPipe</span><span class="pill">Kamera</span><span class="pill">Python</span></div>
+        </div>
+        <div class="panel">
+          <span class="status">I drift</span>
+          <h3>Hjemmeautomasjon</h3>
+          <p>Home Assistant kjører i Docker på en Raspberry Pi og styrer lys og sensorer via Zigbee2MQTT. Egendefinert logikk på en Evolo-gateway justerer blant annet fargetemperaturen på lyset gjennom dagen.</p>
+          <div class="pills"><span class="pill">Home Assistant</span><span class="pill">Docker</span><span class="pill">Zigbee2MQTT</span></div>
+        </div>
+        <div class="panel ghost">
+          <h3>Flere prosjekter på vei</h3>
+          <p>Denne siden fylles på etter hvert som nye prosjekter blir klare.</p>
         </div>
       </div>
     </div>
@@ -156,7 +186,23 @@
                Installerte og feilsøkte på Innbruddsalarmanlegg.
             </div>
           </li>
-        </ul>
+          <li class="tl-item">
+            <h4 class="tl-title">
+              Elektromontør
+              <span class="tl-time">Februar 2021 - Desember 2022</span>
+            </h4>
+            <div class="tl-org">Nordlys Elektro</div>
+            <div class="tl-desc">Utførte nyinstallasjon, feilsøking og vedlikehold av <br>
+              elektriske anlegg i eneboliger, næringsbygg, industri, kai og skip.
+            </div>
+          </li>
+          <li class="tl-item">
+            <h4 class="tl-title">
+              Lærling
+              <span class="tl-time">Juli 2018 - Februar 2021</span>
+            </h4>
+            <div class="tl-org">Nordlys elektro</div>
+            <div class="tl-desc">Tok fagbrev i 2021 med karakteren meget godt bestått</div>
           </li>
         </ul>
       </div>
@@ -194,36 +240,6 @@
       </div>
 
       
-    </div>
-  </section>
-
-  <section class="page" id="prosjekter" data-page="prosjekter">
-    <div class="container section">
-      <h2>Prosjekter</h2>
-      <div class="project-grid">
-        <div class="panel">
-          <span class="status">Fullført</span>
-          <h3>Sensornode med ESP32</h3>
-          <p>En Adafruit ESP32 Feather V2 leser av en BME680-sensor over SPI og sender temperatur- og miljødata videre med MQTT.</p>
-          <div class="pills"><span class="pill">ESP32</span><span class="pill">MQTT</span><span class="pill">SPI</span><span class="pill">BME680</span></div>
-        </div>
-        <div class="panel">
-          <span class="status">Under utvikling</span>
-          <h3>Smart speil</h3>
-          <p>Et speil som skal styres med håndbevegelser, gjenkjent av et kamera via MediaPipe. Programvaren skriver jeg fra bunnen av selv.</p>
-          <div class="pills"><span class="pill">MediaPipe</span><span class="pill">Kamera</span><span class="pill">Python</span></div>
-        </div>
-        <div class="panel">
-          <span class="status">I drift</span>
-          <h3>Hjemmeautomasjon</h3>
-          <p>Home Assistant kjører i Docker på en Raspberry Pi og styrer lys og sensorer via Zigbee2MQTT. Egendefinert logikk på en Evolo-gateway justerer blant annet fargetemperaturen på lyset gjennom dagen.</p>
-          <div class="pills"><span class="pill">Home Assistant</span><span class="pill">Docker</span><span class="pill">Zigbee2MQTT</span></div>
-        </div>
-        <div class="panel ghost">
-          <h3>Flere prosjekter på vei</h3>
-          <p>Denne siden fylles på etter hvert som nye prosjekter blir klare.</p>
-        </div>
-      </div>
     </div>
   </section>
 
