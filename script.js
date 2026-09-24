@@ -44,20 +44,6 @@ themeToggle.addEventListener('click', function(){
   applyTheme(next);
 });
 
-var navToggle = document.getElementById('navToggle');
-var navLinksPanel = document.getElementById('navLinks');
-if (navToggle && navLinksPanel) {
-  navToggle.addEventListener('click', function(){
-    var open = navLinksPanel.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  navLinksPanel.querySelectorAll('.nav-link').forEach(function(link){
-    link.addEventListener('click', function(){
-      navLinksPanel.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
 
 var printBtn = document.getElementById('printBtn');
 if(printBtn){

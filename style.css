@@ -79,10 +79,12 @@ a{color:inherit;}
   display:flex;
   align-items:center;
   height:40px;
+  grid-column:1;
 }
-.brand img{
+.brand-logo{
   height:100%;
   width:auto;
+  color:var(--ink);
 }
 .navlinks{
   display:flex; gap:0.25rem; flex-wrap:wrap;
@@ -94,34 +96,17 @@ a{color:inherit;}
 }
 .nav-link:hover{color:var(--ink); background:var(--bg-alt);}
 .nav-link.active{color:var(--ink); background:var(--bg-alt);}
-.nav-toggle{
-  display:none;
-  justify-self:center;
-  border:1px solid var(--line); background:var(--panel); border-radius:3px;
-  width:2.2rem; height:2.2rem; align-items:center; justify-content:center;
-  cursor:pointer; font-size:1.1rem;
-}
 .theme-toggle{
   border:1px solid var(--line); background:var(--panel); border-radius:3px;
   width:2.2rem; height:2.2rem; display:flex; align-items:center; justify-content:center;
   cursor:pointer; font-size:1rem;
   justify-self:end;
+  grid-column:3;
 }
 @media (max-width:640px){
   .navlinks{
     display:none;
-    position:absolute;
-    top:100%; left:0; right:0;
-    flex-direction:column;
-    flex-wrap:nowrap;
-    gap:0;
-    background:var(--bg);
-    border-bottom:1px solid var(--line);
-    padding:0.5rem 1rem;
   }
-  .navlinks.open{ display:flex; }
-  .nav-link{ padding:0.75rem 0.5rem; }
-  .nav-toggle{ display:flex; }
 }
 @media (max-width:480px){
   .topnav{padding:0.7rem 1rem;}
